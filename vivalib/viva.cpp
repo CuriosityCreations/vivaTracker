@@ -204,7 +204,7 @@ void Processor::run()
 
             try
             {
-                key = waitKey(1);
+                key = waitKey(1) & 0xff;
             }
             catch (...)
             {
