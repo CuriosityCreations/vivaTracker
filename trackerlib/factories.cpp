@@ -226,7 +226,7 @@ Ptr<Tracker> TrackerFactory::createTracker(const string &method, const int argc,
         else
             feat = KFeat::FHOG;
         
-        tracker = new SKCFDCF(KType::GAUSSIAN, KFeat::FHOG, parser.has("s"));
+        tracker = new SKCFDCF(type, feat, parser.has("s"));
         
         if (parser.has("?"))
         {
